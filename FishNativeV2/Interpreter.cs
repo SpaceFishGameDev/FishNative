@@ -380,10 +380,13 @@ namespace FishNativeV2
                                     else
                                     {
                                         data = Var.dataI;
+                                        final.Replace(_name, Var.dataI.ToString());
                                     }
                                 } 
                             }
                         }
+                        int end = (int)command.stringMath(final);
+                        Variable.dataI = end;
                     }
                 }
                 else if (symbols[0].Contains("print"))
